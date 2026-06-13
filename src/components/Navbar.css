@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display:ital@1&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0d0d0d;
+  z-index: 100;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.navbar-logo {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: #00e5a0;
+  letter-spacing: 0.02em;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.navbar-links a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #00e5a0;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #00e5a0;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 1.5px;
+  background-color: #aaaaaa;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 24px;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: #0d0d0d;
+    padding: 24px;
+    gap: 24px;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
