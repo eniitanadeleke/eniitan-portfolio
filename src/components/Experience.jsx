@@ -4,7 +4,7 @@ const experiences = [
   {
     role: 'Frontend Developer',
     company: 'Lufemos Consults',
-    period: '2024 – Present',
+    period: '2021 – 2023',
     description: [
       'Built and maintained dynamic web pages and React-based components, improving usability and overall user engagement.',
       'Developed responsive layouts using HTML5, CSS3, Tailwind CSS, and JavaScript that performed consistently across devices.',
